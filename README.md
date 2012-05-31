@@ -18,6 +18,7 @@
 
 	cd ~/.pow
 	git clone git@github.com:rktjmp/ker-pow.git default
+	cd default
 	bundle install
 	open http://localhost.dev
 
