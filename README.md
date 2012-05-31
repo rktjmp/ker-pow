@@ -6,6 +6,8 @@
 
 `Ker-Pow` will only notice sym links, so if you're putting your apps directly inside `~/.pow` then it won't see them.
 
+`Ker-Pow` is a [sinatra](http://www.sinatrarb.com/) app and requires the sinatra gem to be installed. Details are provided below.
+
 ## What does it look like?
 
 `Ker-Pow` probably looks close to this:
@@ -16,6 +18,7 @@
 
 	cd ~/.pow
 	git clone git@github.com:rktjmp/ker-pow.git default
+	bundle install
 	open http://localhost.dev
 
 `Pow` will run any app placed inside `~/.pow/default/` when you navigate to `http://localhost.dev/`, which is why you check out to the folder `default`.
