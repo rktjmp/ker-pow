@@ -3,12 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('http://subtlepatterns.com/patterns/dark_wall.png');
-  // background: url('http://subtlepatterns.com/patterns/txture.png');
-  // background: url('http://subtlepatterns.com/patterns/dark_leather.png');
-  // background: url('http://subtlepatterns.com/patterns/wood_1.png');
-  // background: url('http://subtlepatterns.com/patterns/carbon_fibre.png');
-  // background: url('http://subtlepatterns.com/patterns/black_denim.png');
+  background: url('/dark_wall.png');
   line-height: 18px;
 }
 
@@ -19,23 +14,13 @@ div.page {
   margin: 20px auto;
   padding: 30px 20px 30px 20px;
   color: #333;
-
-// margin: 72px auto;
-// margin: 36px auto;
-// background: #fff;
-// border-radius: 18px;
-// -webkit-box-shadow: 0px 2px 7px #999;
-// -moz-box-shadow: 0px 2px 7px #999;
-// padding: 36px 90px;
-// width: 480px;
-// position: relative;
 }
 
 h1{
   line-height: 55px;
   font-size: 55px;
   text-align: center;
-  font-family: 'Carter One';
+  font-family: 'Carter One', sans-serif;
   color: #a3a3a3;
   text-shadow: 0px 1px 0px #ffffff;
   &.title{
@@ -47,11 +32,7 @@ h1{
 }
 
 body, p, a, li{
-  // font-family: 'Questrial';
-  // font-family: 'Droid Sans';
-  // font-family: 'Lato';
-  font-family: 'Arvo';
-  // font-family: 'Cabin';
+  font-family: 'Arvo', sans-serif;
 }
 
 a, a:hover, a:visited{

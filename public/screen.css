@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("http://subtlepatterns.com/patterns/dark_wall.png");
+  background: url("/dark_wall.png");
   line-height: 18px; }
 
 div.page {
@@ -15,7 +15,7 @@ h1 {
   line-height: 55px;
   font-size: 55px;
   text-align: center;
-  font-family: 'Carter One';
+  font-family: 'Carter One', sans-serif;
   color: #a3a3a3;
   text-shadow: 0px 1px 0px #ffffff; }
   h1.title {
@@ -25,7 +25,7 @@ h1 {
     border-bottom: 1px solid #a3a3a3; }
 
 body, p, a, li {
-  font-family: 'Arvo'; }
+  font-family: 'Arvo', sans-serif; }
 
 a, a:hover, a:visited {
   color: #333;
