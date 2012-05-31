@@ -24,7 +24,7 @@
 
 `Pow` will run any app placed inside `~/.pow/default/` when you navigate to `http://localhost.dev/`, which is why you check out to the folder `default`.
 
-## Hey! Somethings broken!
+## Hey! Something's broken!
 
 Bug fixes are welcomed. 
 
