@@ -1,5 +1,18 @@
+<h1 class="">Ker-Pow!</h1>
 <ul>
-<% links.each do |link| %>
-	<li><a href="<%= link %>"><%= link %></a></li>
-<% end %>
+	<% links.each do |link| %>
+		<li><a href="<%= link %>"><%= link %></a></li>
+	<% end %>
 </ul>
+
+<section id="help">
+	<p>
+		Set up a Rack application by symlinking it into your <code>~/.pow</code> directory. The name of the symlink determines the hostname you’ll use to access the application.
+	</p>
+	<pre>
+		<span>$</span> cd ~/.pow
+		<span>$</span> ln -s /path/to/myapp
+		<span>$</span> open http://myapp.dev/
+	</pre>
+</section>    
+
