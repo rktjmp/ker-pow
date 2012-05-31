@@ -4,6 +4,8 @@
 
 `Ker-Pow` creates an index of your [Pow](http://pow.cx/) apps.
 
+`Ker-Pow` will only notice sym links, so if you're putting your apps directly inside `~/.pow` then it won't see them.
+
 ## What does it look like?
 
 `Ker-Pow` probably looks close to this:
