@@ -3,8 +3,12 @@
 <ul>
 	<% apps.each do |app| %>
 			<li>
-				<div class="app-link"><a href="<%= app[:link] %>" title="Go to <%= app[:name]%>"><%= app[:name] %></a></div>
-				<div class="app-restart"><a href="/restart/<%= app[:name] %>" title="Restart <%= app[:name] %>">restart</a></div>
+				<a href="<%= app[:link] %>" title="Go to <%= app[:name]%>">
+					<div class="app-link"><%= app[:name] %></div>
+				</a>
+				<a href="/restart/<%= app[:name] %>" title="Restart <%= app[:name] %>">
+					<div class="app-restart">restart</div>
+				</a>
 			</li>
 		</a>
 	<% end %>

@@ -47,18 +47,17 @@ ul {
     line-height: 32px;
     list-style-type: none;
     background: #bcbcbc;
-    background-image: linear-gradient(top, #bcbcbc 0%, #b7b7b7 100%);
     margin-bottom: 15px;
     padding-left: 10px;
     border-radius: 3px;
     position: relative; }
-    ul li div.app-link a {
-      display: block; }
     ul li div.app-restart {
+      display: inline;
       opacity: 0.0;
       position: absolute;
-      right: 10px;
-      top: 0px; }
+      right: 0px;
+      top: 0px;
+      padding: 0px 10px; }
     ul li:hover {
       background-image: linear-gradient(top, #b7b7b7 0%, #b2b2b2 100%); }
       ul li:hover div.app-restart {
