@@ -1,3 +1,18 @@
+$light-grey-color: #e3e3e3;
+$darker-grey-color: #a3a3a3;
+
+$page-background-color: $light-grey-color;
+
+$heading-text-color: lighten($darker-grey-color, 0%);
+$heading-border-bottom-color: lighten($darker-grey-color, 15%);
+
+$text-color: #333;
+
+$link-color: $text-color;
+$link-hover-color: $link-color;
+$link-visited-color: $link-color;
+
+
 
 
 body {
@@ -8,12 +23,11 @@ body {
 }
 
 div.page {
-  background: #e3e3e3;
-  // width: 60%;
+  background: $page-background-color;
   width: 560px;
   margin: 20px auto;
   padding: 30px 20px 30px 20px;
-  color: #333;
+  color: $text-color;
 }
 
 h1{
@@ -21,13 +35,13 @@ h1{
   font-size: 55px;
   text-align: center;
   font-family: 'Carter One', sans-serif;
-  color: #a3a3a3;
+  color: $heading-text-color;
   text-shadow: 0px 1px 0px #ffffff;
   &.title{
     margin:0px;
     padding: 0px 0px 30px 0px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #a3a3a3;
+    margin-bottom: 35px;
+    border-bottom: 1px solid $heading-border-bottom-color;
   }
 }
 
@@ -36,8 +50,16 @@ body, p, a, li{
 }
 
 a, a:hover, a:visited{
-  color: #333;
   text-decoration: none;  
+}
+a{
+  color: $link-color;
+}
+a:hover{
+  color: $link-hover-color;
+}
+a:visited{
+  color: $link-visited-color;
 }
 
 ul {
@@ -47,7 +69,8 @@ ul {
     font-size: 18px;
     line-height: 32px;
     list-style-type: none;
-    background: #a3a3a3;
+    background: lighten($darker-grey-color, 10%);
+    background-image: linear-gradient(top, lighten($darker-grey-color, 10%) 0%, lighten($darker-grey-color, 8%) 100%);
     margin-bottom: 15px;
     padding-left: 10px;
     border-radius: 3px;
@@ -57,6 +80,7 @@ ul {
       margin-right: 10px;
     }
     &:hover{
+      background-image: linear-gradient(top, lighten($darker-grey-color, 8%) 0%, lighten($darker-grey-color, 6%) 100%);
       span{
         display: inline;
       }
@@ -69,7 +93,6 @@ a.show-help{
   &:hover{
     opacity: 1.0;
   }
-
 }
 
 section#help{
