@@ -107,7 +107,31 @@ a.show-help{
 section#help{
   display: none;
   pre{
-    margin-left: 20px;
-    margin-bottom: 0px;
+    // /margin-left: 20px;
+    margin: 0px 20px;
+    // margin-bottom: 0px;
+  }
+}
+
+code, pre{
+  background: $light-grey-color;
+  border: 1px solid $darker-grey-color;
+  padding: 0px 3px;
+}
+
+ul.code{
+  @extend code;
+  margin: 0px 20px;
+  li{
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 18px;
+    list-style-type: none;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    &:before{
+      content: "$ "
+    }
   }
 }
