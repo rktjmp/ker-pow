@@ -1,0 +1,13 @@
+<p>
+	We could not restart the app '<%= app[:name] %>', perhaps there is no <code>tmp/</code> directory?
+</p>
+
+<p>
+	You may be able to fix this error by doing the following (copy &amp; paste):
+</p>
+
+<ul class="code">
+	<li>mkdir ~/.pow/<%= app[:name] %>/tmp</li>
+	<li>touch ~/.pow/<%= app[:name] %>/tmp/restart.txt</li>
+	<li>open http://<%= app[:name] %>.dev/</li>
+</ul>

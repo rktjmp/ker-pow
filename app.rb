@@ -12,6 +12,11 @@ get '/' do
 end
 
 get '/restart/:symlink' do
-	FileUtils.touch("../#{params[:symlink]}/tmp/restart.txt")
-	redirect to("http://#{params[:symlink]}.dev")
+	begin
+		FileUtils.touch("../#{params[:symlink]}/tmp/restart.txt")
+		redirect to("http://#{params[:symlink]}.dev")
+	rescue
+		app = {name: params[:symlink], link: "http://#{params[:symlink]}.dev"}
+		erb :restart_error, locals: {app: app}
+	end
 end
