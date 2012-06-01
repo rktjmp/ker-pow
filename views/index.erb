@@ -1,4 +1,4 @@
-<ul>
+<ul class="apps">
 	<% apps.each do |app| %>
 			<li>
 				<a href="<%= app[:link] %>" title="Go to <%= app[:name]%>">
@@ -17,11 +17,11 @@
 	<p>
 		Set up a Rack application by symlinking it into your <code>~/.pow</code> directory. The name of the symlink determines the hostname you’ll use to access the application.
 	</p>
-<ul class="code">
-	<li>cd ~/.pow</li>
-	<li>ln -s /path/to/myapp</li>
-	<li>open http://myapp.dev/</li>
-</ul>
+	<ul class="code">
+		<li>cd ~/.pow</li>
+		<li>ln -s /path/to/myapp</li>
+		<li>open http://myapp.dev/</li>
+	</ul>
 </section>    
 
 
