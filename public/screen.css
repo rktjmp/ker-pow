@@ -50,15 +50,21 @@ ul {
     background-image: linear-gradient(top, #bcbcbc 0%, #b7b7b7 100%);
     margin-bottom: 15px;
     padding-left: 10px;
-    border-radius: 3px; }
-    ul li span {
-      display: none;
-      float: right;
-      margin-right: 10px; }
+    border-radius: 3px;
+    position: relative; }
+    ul li div.app-link a {
+      display: block; }
+    ul li div.app-restart {
+      opacity: 0.0;
+      position: absolute;
+      right: 10px;
+      top: 0px; }
     ul li:hover {
       background-image: linear-gradient(top, #b7b7b7 0%, #b2b2b2 100%); }
-      ul li:hover span {
-        display: inline; }
+      ul li:hover div.app-restart {
+        opacity: 0.2; }
+        ul li:hover div.app-restart:hover {
+          opacity: 1.0; }
 
 a.show-help {
   opacity: 0.2; }

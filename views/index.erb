@@ -1,8 +1,12 @@
 <h1 class="title">Ker-Pow!</h1>
 
 <ul>
-	<% links.each do |link| %>
-		<a href="<%= link %>"><li><%= link %> <span>&rarr;</span></li></a>
+	<% apps.each do |app| %>
+			<li>
+				<div class="app-link"><a href="<%= app[:link] %>" title="Go to <%= app[:name]%>"><%= app[:name] %></a></div>
+				<div class="app-restart"><a href="/restart/<%= app[:name] %>" title="Restart <%= app[:name] %>">restart</a></div>
+			</li>
+		</a>
 	<% end %>
 </ul>
 

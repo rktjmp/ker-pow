@@ -74,15 +74,26 @@ ul {
     margin-bottom: 15px;
     padding-left: 10px;
     border-radius: 3px;
-    span{
-      display: none;
-      float: right;
-      margin-right: 10px;
+    position: relative;
+    div.app-link{
+      a{
+        display: block;
+      }
+    }
+    div.app-restart{
+      opacity: 0.0;
+      position: absolute;
+      right: 10px;
+      top: 0px;
     }
     &:hover{
       background-image: linear-gradient(top, lighten($darker-grey-color, 8%) 0%, lighten($darker-grey-color, 6%) 100%);
-      span{
-        display: inline;
+      div.app-restart{
+        opacity: 0.2;
+        &:hover{
+          opacity: 1.0;
+        }
+
       }
     }
   }
