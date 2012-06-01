@@ -12,6 +12,8 @@ $link-color: $text-color;
 $link-hover-color: $link-color;
 $link-visited-color: $link-color;
 
+$animation-duration: 20ms;
+$animation-easing: linear;
 
 body {
   margin: 0;
@@ -45,6 +47,8 @@ h1{
   font-family: 'Carter One', sans-serif;
   color: $heading-text-color;
   text-shadow: 0px 1px 0px #ffffff;
+  &:hover{
+  }
   &.title{
     margin:0px;
     padding: 0px 0px 30px 0px;
@@ -82,9 +86,11 @@ ul.apps {
     padding-left: 10px;
     border-radius: 3px;
     position: relative;
+    // transition: all $animation-duration $animation-easing;
     div.app-link{
     }
     div.app-restart{
+      // transition: all $animation-duration $animation-easing;
       display: inline;
       opacity: 0.0;
       position: absolute;
@@ -92,8 +98,10 @@ ul.apps {
       top: 0px;
       padding: 0px 10px;
     }
+    
     &:hover{
       background-image: linear-gradient(top, lighten($darker-grey-color, 8%) 0%, lighten($darker-grey-color, 6%) 100%);
+      // background: lighten($darker-grey-color, 6%);
       div.app-restart{
         opacity: 0.2;
         &:hover{
@@ -105,6 +113,7 @@ ul.apps {
 }
 
 a.show-help{
+  // transition: all $animation-duration $animation-easing;
   opacity: 0.2;
   &:hover{
     opacity: 1.0;
