@@ -30,6 +30,9 @@ div.page {
   @media only screen and (max-width: 600px){
     width: 90%;
   }
+  &.log{
+    width: 90%;
+  }
 
   margin: 20px auto;
   padding: 30px 20px 30px 20px;
@@ -85,22 +88,34 @@ ul.apps {
     // transition: all $animation-duration $animation-easing;
     div.app-link{
     }
-    div.app-restart{
-      // transition: all $animation-duration $animation-easing;
+    div.app-controls{
       display: inline;
-      opacity: 0.0;
       position: absolute;
       right: 0px;
       top: 0px;
-      padding: 0px 10px;
+      // padding: 0px 10px;
+      a div{
+        padding: 0px 10px;
+      }
+      a:first-child div{
+          padding-right: 0px;
+      }
+      a:last-child div{
+      }
+      div.app-restart, div.app-log{
+        opacity: 0.0;
+        display: inline;
+      }
     }
-    
     &:hover{
       background-image: linear-gradient(top, lighten($darker-grey-color, 8%) 0%, lighten($darker-grey-color, 6%) 100%);
       // background: lighten($darker-grey-color, 6%);
-      div.app-restart{
-        opacity: 0.2;
-        &:hover{
+      div.app-controls{
+        border-left: 1px solid $darker-grey-color;
+        div.app-restart, div.app-log{
+          opacity: 0.2;
+        }
+        div.app-restart:hover, div.app-log:hover{
           opacity: 1.0;
         }
       }
@@ -126,7 +141,7 @@ code, pre{
   padding: 0px 3px;
 }
 
-ul.code{
+ul.code, ul.log{
   background: $light-grey-color;
   border: 1px solid $darker-grey-color;
   // padding: 0px 3px;
@@ -140,8 +155,9 @@ ul.code{
     background: none;
     margin: 0px;
     padding: 0px;
-    &:before{
-      content: "$ "
-    }
   }
+}
+
+ul.code li:before{
+  content: "$ "
 }

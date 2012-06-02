@@ -14,6 +14,8 @@ div.page {
   @media only screen and (max-width: 600px) {
     div.page {
       width: 90%; } }
+  div.page.log {
+    width: 90%; }
 
 h1 {
   line-height: 55px;
@@ -55,18 +57,25 @@ ul.apps {
     padding-left: 10px;
     border-radius: 3px;
     position: relative; }
-    ul.apps li div.app-restart {
+    ul.apps li div.app-controls {
       display: inline;
-      opacity: 0.0;
       position: absolute;
       right: 0px;
-      top: 0px;
-      padding: 0px 10px; }
+      top: 0px; }
+      ul.apps li div.app-controls a div {
+        padding: 0px 10px; }
+      ul.apps li div.app-controls a:first-child div {
+        padding-right: 0px; }
+      ul.apps li div.app-controls div.app-restart, ul.apps li div.app-controls div.app-log {
+        opacity: 0.0;
+        display: inline; }
     ul.apps li:hover {
       background-image: linear-gradient(top, #b7b7b7 0%, #b2b2b2 100%); }
-      ul.apps li:hover div.app-restart {
-        opacity: 0.2; }
-        ul.apps li:hover div.app-restart:hover {
+      ul.apps li:hover div.app-controls {
+        border-left: 1px solid #a3a3a3; }
+        ul.apps li:hover div.app-controls div.app-restart, ul.apps li:hover div.app-controls div.app-log {
+          opacity: 0.2; }
+        ul.apps li:hover div.app-controls div.app-restart:hover, ul.apps li:hover div.app-controls div.app-log:hover {
           opacity: 1.0; }
 
 a.show-help {
@@ -82,12 +91,12 @@ code, pre {
   border: 1px solid #a3a3a3;
   padding: 0px 3px; }
 
-ul.code {
+ul.code, ul.log {
   background: #e3e3e3;
   border: 1px solid #a3a3a3;
   padding: 5px 20px;
   margin: 0px; }
-  ul.code li {
+  ul.code li, ul.log li {
     font-family: monospace;
     font-size: 13px;
     line-height: 18px;
@@ -95,5 +104,6 @@ ul.code {
     background: none;
     margin: 0px;
     padding: 0px; }
-    ul.code li:before {
-      content: "$ "; }
+
+ul.code li:before {
+  content: "$ "; }
