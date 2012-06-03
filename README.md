@@ -4,7 +4,7 @@
 
 `Ker-Pow` creates an index of your [Pow](http://pow.cx/) apps.
 
-`Ker-Pow` will only notice sym links, so if you're putting your apps directly inside `~/.pow` then it won't see them.
+`Ker-Pow` will notice any symlinks and folders inside `~/.pow/` except for itself.
 
 `Ker-Pow` is a [sinatra](http://www.sinatrarb.com/) app and requires the sinatra gem to be installed. Details are provided below.
 

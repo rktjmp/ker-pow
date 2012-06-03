@@ -4,7 +4,9 @@ require 'sinatra'
 get '/' do
   
   apps = Dir.entries('../').select do |entry|
-    File.symlink? File.join("..", entry) and entry != "default"
+  	filter = ["..", ".", "default"]
+	full_path = File.join("..", entry)
+    (File.symlink?(full_path) || File.directory?(full_path)) && (not filter.include?(entry))
   end.map {|symlink| {name: symlink, link: "http://#{symlink}.dev"}}
 
   erb :index, locals: {apps: apps}
